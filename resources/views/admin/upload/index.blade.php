@@ -87,7 +87,7 @@
                                     删除
                                 </button>
                                 @if (is_image($file['mimeType']))
-                                    <button type="button" class="btn btn-xs btn-success" onclick="preview_image('{{ $file['webPath'] }}')">
+                                    <button type="button" class="btn btn-xs btn-success" onclick="preview_image('{{ $file['picPath'] }}')">
                                         <i class="fa fa-eye fa-lg"></i>
                                         预览
                                     </button>

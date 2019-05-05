@@ -101,6 +101,7 @@ class UploadsManager
             'mimeType' => $this->fileMimeType($path),
             'size' => $this->fileSize($path),
             'modified' => $this->fileModified($path),
+            'picPath' => $this->filePicpath($path),
         ];
     }
 
@@ -113,6 +114,14 @@ class UploadsManager
         return url($path);
     }
 
+    /**
+     * 返回的预览的 pic路径
+     */
+    public function filePicpath($path)
+    {
+        $path = rtrim(config('blog.uploads.picpath'), '/') . '/' . ltrim($path, '/');
+          return url($path);
+    }
     /**
      * 返回文件MIME类型
      */
